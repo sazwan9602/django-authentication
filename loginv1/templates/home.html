@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+        Welcome Home {{ user.username }}
+    {% else %}
+        Welcome Guest
+    {% endif %}
+{% endblock content %}
