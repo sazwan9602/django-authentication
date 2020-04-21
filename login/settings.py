@@ -26,6 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -122,3 +123,10 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/authv1/'
 LOGIN_URL = '/authv1/login/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # During development only
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'email@email.com'
+EMAIL_HOST_PASSWORD = 'password'
