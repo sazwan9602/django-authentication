@@ -20,7 +20,7 @@ def register(request):
             messages.success(request, f'Account created for {username}!')
             group = Group.objects.get(name='customer')
             user.groups.add(group)
-            return redirect('authv1:loginv1')
+            return redirect('loginv1')
     else:
         form = UserRegisterForm()
 
